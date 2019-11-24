@@ -1,0 +1,1475 @@
+fileFormatVersion: 2
+guid: 848c89276323953419651810e1ec870a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: NhanVat1._0
+    21300002: NhanVat1._1
+    21300004: NhanVat1._2
+    21300006: NhanVat1._3
+    21300008: NhanVat1._4
+    21300010: NhanVat1._5
+    21300012: NhanVat1._6
+    21300014: NhanVat1._7
+    21300016: NhanVat1._8
+    21300018: NhanVat1._9
+    21300020: NhanVat1._10
+    21300022: NhanVat1._11
+    21300024: NhanVat1._12
+    21300026: NhanVat1._13
+    21300028: NhanVat1._14
+    21300030: NhanVat1._15
+    21300032: NhanVat1._16
+    21300034: NhanVat1._17
+    21300036: NhanVat1._18
+    21300038: NhanVat1._19
+    21300040: NhanVat1._20
+    21300042: NhanVat1._21
+    21300044: NhanVat1._22
+    21300046: NhanVat1._23
+    21300048: NhanVat1._24
+    21300050: NhanVat1._25
+    21300052: NhanVat1._26
+    21300054: NhanVat1._27
+    21300056: NhanVat1._28
+    21300058: NhanVat1._29
+    21300060: NhanVat1._30
+    21300062: NhanVat1._31
+    21300064: NhanVat1._32
+    21300066: NhanVat1._33
+    21300068: NhanVat1._34
+    21300070: NhanVat1._35
+    21300072: NhanVat1._36
+    21300074: NhanVat1._37
+    21300076: NhanVat1._38
+    21300078: NhanVat1._39
+    21300080: NhanVat1._40
+    21300082: NhanVat1._41
+    21300084: NhanVat1._42
+    21300086: NhanVat1._43
+    21300088: NhanVat1._44
+    21300090: NhanVat1._45
+    21300092: NhanVat1._46
+    21300094: NhanVat1._47
+    21300096: NhanVat1._48
+    21300098: NhanVat1._49
+    21300100: NhanVat1._50
+    21300102: NhanVat1._51
+    21300104: NhanVat1._52
+    21300106: NhanVat1._53
+    21300108: NhanVat1._54
+    21300110: NhanVat1._55
+    21300112: NhanVat1._56
+    21300114: NhanVat1._57
+    21300116: NhanVat1._58
+    21300118: NhanVat1._59
+    21300120: NhanVat1._60
+    21300122: NhanVat1._61
+    21300124: NhanVat1._62
+    21300126: NhanVat1._63
+    21300128: NhanVat1._64
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NhanVat1._0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1024
+        width: 68
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d92c296cf5f38441892e427de3dc140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1026
+        width: 74
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7575f8afb42a34db2bcf8c5219c59d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1026
+        width: 102
+        height: 100
+      alignment: 9
+      pivot: {x: 0.3311051, y: 0.51914185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c40dd3aaf58324cac7f34b7c5bd9e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1025
+        width: 102
+        height: 100
+      alignment: 9
+      pivot: {x: 0.31233934, y: 0.5000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bb8799f8950684f94ed349c5889fd0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._4
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1025
+        width: 68
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291b6f17ba533544292699907b28557a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._5
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1026
+        width: 64
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4655fda63ccc8ec48990643fcbec7a0a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._6
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1028
+        width: 76
+        height: 72
+      alignment: 9
+      pivot: {x: 0.4244417, y: 0.50000167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5140ff9f190aa0d4a98b6e524fdc2b9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._7
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 1027
+        width: 109
+        height: 72
+      alignment: 9
+      pivot: {x: 0.28926912, y: 0.5265859}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6d362318cfed84c94f19ab8c44014f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 905
+        width: 76
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edfcf35c9bc7f24f989a63c4ef1d744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 907
+        width: 93
+        height: 66
+      alignment: 9
+      pivot: {x: 0.37650716, y: 0.47099906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24284bdff484d5469657206f22000d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._10
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 908
+        width: 135
+        height: 60
+      alignment: 9
+      pivot: {x: 0.35821182, y: 0.46809897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2931c010ebd7c0241929dd6fafca7b3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._11
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 901
+        width: 63
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd265e0d35d79054b9960ef1af2772a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._12
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 901
+        width: 63
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f643d5ef8afe34ebc987bad3f53f7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._13
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 902
+        width: 71
+        height: 118
+      alignment: 9
+      pivot: {x: 0.4730414, y: 0.5324438}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2d5719fe7ef9940b890a4265a74dcd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._14
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 916
+        width: 61
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470536523ecfa0441b731bc64f905f7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 778
+        width: 54
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0792bc325d7214fbda4e508b66d11b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._16
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 776
+        width: 61
+        height: 83
+      alignment: 9
+      pivot: {x: 0.40586165, y: 0.5000007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a99b5a538cd6ed4f8bf8fde36c424ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._17
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 775
+        width: 95
+        height: 103
+      alignment: 9
+      pivot: {x: 0.27836272, y: 0.5000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799330fc59ea97141ad4b2cc5535ffce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 778
+        width: 58
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065cf7c371e52854cb80d958b97e2374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._19
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 777
+        width: 96
+        height: 105
+      alignment: 9
+      pivot: {x: 0.739268, y: 0.53646064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87574fa6a1627f440bca339607399e79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._20
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 781
+        width: 61
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2a8fd058afa544f86c9075016f6d36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._21
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 779
+        width: 53
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6366b516a8d55428367d5d1b9b7037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._22
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 781
+        width: 56
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbbfdfca53bb074e8a3bf72ce5e6f66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._23
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 647
+        width: 54
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300b0fa8abb39f544bb0f441813d9768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._24
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 651
+        width: 53
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d809bee2d63095145952d71a2d739bf5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._25
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 659
+        width: 66
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd73ae37022a714e80b4b9a45aed781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._26
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 657
+        width: 78
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e23e348580dd554cbb4013435917707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._27
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 651
+        width: 62
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541d9279e1430234ebf0f8257a789e16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._28
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 655
+        width: 55
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee6d454b1c00d84f957f87368b36ba6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._29
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 657
+        width: 61
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1d0cfe19916044b989298eca35a24f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._30
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 659
+        width: 62
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9818fc42890fa8468f5734986e01e0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._31
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 526
+        width: 67
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf17074df40d97048a19f1371d1ba639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._32
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 528
+        width: 65
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696e2b4cd67dbcd44a39c297d35a2c03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._33
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 529
+        width: 67
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4b83e1e359d3a4484fe26564fe976a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._34
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 532
+        width: 63
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fc6464b5352444e85b189bbab68aa9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._35
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 532
+        width: 64
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ca88839223d5f47913350360912f03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._36
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 559
+        width: 103
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568f622c13b7faf489da131d2a53eb0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._37
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 543
+        width: 55
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd20457839eb789408fdd57c3f9a226d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._38
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 556
+        width: 64
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f15189f36516d46a3e7e14b1faca25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._39
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 410
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc2f2210eb275a4f9b534479bb37d33
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._40
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 414
+        width: 64
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c1c6b866cab614d880864c6513e4eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._41
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 411
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a79b71025992064fb130e8525335411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._42
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 412
+        width: 63
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bf7311963b2ba4a980b42bb4dee02f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._43
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 411
+        width: 64
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e50cacee89ada4ba3384acbd92f7c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._44
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 413
+        width: 67
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88adab3fbe070a40826439bc818698b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._45
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 414
+        width: 67
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81dfc6a112b5fb4fba1bb9166999aa4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._46
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 414
+        width: 68
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fa2ec369822e14880f9ab16f4e2b14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._47
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 271
+        width: 106
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8061c19f825284a8125801d5fc28a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._48
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 275
+        width: 84
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075ec0d48af8f9e46a9e1881391d6d8b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._49
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 275
+        width: 85
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de5ffe346d15c34c948dd253ddc738f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._50
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 275
+        width: 76
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a877cdc92513c74ab544dae16357280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._51
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 273
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09f28d2a9c682a4a83eb4b4621f1e58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._52
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 272
+        width: 77
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b5911014392fd4db356c9c5f322c00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._53
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 275
+        width: 61
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bf98b8f43901f48a0018d5e58cd947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._54
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 137
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7bc4a875189a70468b7d592ed2037e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._55
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 138
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e80b495f35072498c8945692890277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._56
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 139
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31489e86623e54f4c91f7e20fe3d5940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._57
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 140
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f127ccf90dfe4740a506d1e7653c7a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._58
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 140
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dea3c0b1f7961d4aa5cdea63abd7b74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._59
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 140
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301abdbe1476e1542a1b3917542c5cb4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._60
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 139
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9ae6b8116c99a4ead56e8133b52c7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._61
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 139
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cff70848ecf0674294076ecfb39c1bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._62
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 17
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde58426fa7af4d47b97dc6a1018123e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._63
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 20
+        width: 108
+        height: 100
+      alignment: 9
+      pivot: {x: 0.41138232, y: 0.5191425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44183902cc8f60d49845e194b50fa13d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat1._64
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 16
+        width: 196
+        height: 118
+      alignment: 9
+      pivot: {x: 0.48046812, y: 0.5000007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e2249a4a534cb4087ea08c32ea1589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 74783ae79638884448ed858122afd3f7
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
