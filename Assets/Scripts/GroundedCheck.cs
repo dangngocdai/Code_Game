@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ground : MonoBehaviour
+public class GroundedCheck : MonoBehaviour
 {
     // Start is called before the first frame update
-
     public Player2 player;
     void Start()
     {
         player = gameObject.GetComponentInParent<Player2>();
     }
-    
+
 
     void OnTriggerEnter2D(Collider2D conlision)
     {

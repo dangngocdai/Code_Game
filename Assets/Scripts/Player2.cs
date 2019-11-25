@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player2 : MonoBehaviour
 {
-    public float speed = 50f, maxspeed = 3, maxjump = 10, jumpPow = 300f;
+    public float speed = 50f, maxspeed = 3,jumpPow = 300f;
     public bool grounded = true, faceright = true, doublejump = false;
 
     public Rigidbody2D r2;
@@ -26,11 +26,6 @@ public class Player2 : MonoBehaviour
 
         if (r2.velocity.x < -maxspeed)
             r2.velocity = new Vector2(-maxspeed, r2.velocity.y);// giới hạn tốc độ khi về phía bên trái
-        //if (r2.velocity.y > maxjump)
-        //    r2.velocity = new Vector2(r2.velocity.x, maxjump);// giới hạn tốc độ khi về phía bên phải
-
-        //if (r2.velocity.y < -maxjump)
-        //    r2.velocity = new Vector2(r2.velocity.x, -maxjump);// giới hạn tốc độ khi về phía bên trái
 
         if (h > 0 && faceright)
         {
@@ -47,14 +42,13 @@ public class Player2 : MonoBehaviour
     void Update()
     {
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
-        anim.SetBool("ground", grounded);
-
+        anim.SetBool("grounded", grounded);
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (grounded)
             {
-                doublejump = true;
                 grounded = false;
+                doublejump = true;
                 r2.AddForce(Vector2.up * jumpPow);
             }
             else
@@ -63,7 +57,7 @@ public class Player2 : MonoBehaviour
                 {
                     doublejump = false;
                     r2.velocity = new Vector2(r2.velocity.x, 0);
-                    r2.AddForce(Vector2.up * jumpPow * 0.7f);
+                    r2.AddForce(Vector2.up * jumpPow);
                 }
             }
         }
