@@ -22,32 +22,32 @@ public class Player3 : MonoBehaviour
     private void FixedUpdate()
     {
 
-        float h = Input.GetAxis("Player3DiChuyen");// lấy thuộc tính Horizontal trong Input
-        //if (!sitdown)
+        float h = Input.GetAxis("Player3DiChuyen");
+        if (!sitdown)
             r2.AddForce((Vector2.right) * speed * h);
-        //float up = Input.GetAxis("Vertical");
-        //if (up < 0)
-        //{
-        //    sitdown = true;
-        //    r2.velocity = new Vector2(0, r2.velocity.y);
-        //    col2.size = new Vector2(col2.size.x, 2);
-        //    col2.offset = new Vector2(col2.offset.x, -1.65f);
-        //    r2.position = new Vector2(r2.position.x, -3);
-        //    //transform.position = new Vector3(transform.position.x, -3, transform.position.z);
-        //    //r2.velocity = new Vector2(transform.localPosition.x, transform.localPosition.y);
-        //}
-        //else
-        //{
-        //    sitdown = false;
-        //    col2.size = new Vector2(col2.size.x, 5.33333f);
-        //    col2.offset = new Vector2(col2.offset.x, 0);
-        //}
+        float up = Input.GetAxis("Player3Ngoi");
+        if (up < 0)
+        {
+            sitdown = true;
+            r2.velocity = new Vector2(0, r2.velocity.y);
+            col2.size = new Vector2(col2.size.x, 2.5f);
+            col2.offset = new Vector2(col2.offset.x, -1.4f);
+            r2.position = new Vector2(r2.position.x, -3);
+            //transform.position = new Vector3(transform.position.x, -3, transform.position.z);
+            //r2.velocity = new Vector2(transform.localPosition.x, transform.localPosition.y);
+        }
+        else
+        {
+            sitdown = false;
+            col2.size = new Vector2(col2.size.x, 5.43333f);
+            col2.offset = new Vector2(col2.offset.x, 0);
+        }
         //sitdown = false;
         if (r2.velocity.x > maxspeed)
-            r2.velocity = new Vector2(maxspeed, r2.velocity.y);// giới hạn tốc độ khi về phía bên phải
+            r2.velocity = new Vector2(maxspeed, r2.velocity.y);
 
         if (r2.velocity.x < -maxspeed)
-            r2.velocity = new Vector2(-maxspeed, r2.velocity.y);// giới hạn tốc độ khi về phía bên trái
+            r2.velocity = new Vector2(-maxspeed, r2.velocity.y);
 
         if (h < 0 && faceright)
         {
@@ -71,6 +71,7 @@ public class Player3 : MonoBehaviour
 
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
         anim.SetBool("grounded", grounded);
+        anim.SetBool("sitdown", sitdown);
         //anim.SetBool("sitdown", sitdown);
         if (Input.GetKeyDown(KeyCode.W))
         {
