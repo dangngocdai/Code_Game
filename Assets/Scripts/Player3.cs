@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player2 : MonoBehaviour
+public class Player3 : MonoBehaviour
 {
-    public float speed = 100f, maxspeed = 4, jumpPow = 300f;
-    public bool grounded = true, faceright = true, doublejump = false, sitdown = false;
+    // Start is called before the first frame update
+    public float speed = 100f, maxspeed = 4, jumpPow = 320f;
+    public bool grounded = true, faceright = true, sitdown = false;
 
     public Rigidbody2D r2;
     public Animator anim;
@@ -21,25 +22,26 @@ public class Player2 : MonoBehaviour
     private void FixedUpdate()
     {
 
-        float h = Input.GetAxis("Player2DiChuyen");// lấy thuộc tính Horizontal trong Input
-        if (!sitdown) r2.AddForce((Vector2.right) * speed * h);
-        float up = Input.GetAxis("Player2Ngoi");
-        if (up < 0)
-        {
-            sitdown = true;
-            r2.velocity = new Vector2(0, r2.velocity.y);
-            col2.size = new Vector2(col2.size.x, 2);
-            col2.offset = new Vector2(col2.offset.x,-1.65f);
-            r2.position = new Vector2(r2.position.x, -3);
-            //transform.position = new Vector3(transform.position.x, -3, transform.position.z);
-            //r2.velocity = new Vector2(transform.localPosition.x, transform.localPosition.y);
-        }
-        else
-        {
-            sitdown = false;
-            col2.size = new Vector2(col2.size.x, 5.33333f);
-            col2.offset = new Vector2(col2.offset.x, 0);
-        }
+        float h = Input.GetAxis("Player3DiChuyen");// lấy thuộc tính Horizontal trong Input
+        //if (!sitdown)
+            r2.AddForce((Vector2.right) * speed * h);
+        //float up = Input.GetAxis("Vertical");
+        //if (up < 0)
+        //{
+        //    sitdown = true;
+        //    r2.velocity = new Vector2(0, r2.velocity.y);
+        //    col2.size = new Vector2(col2.size.x, 2);
+        //    col2.offset = new Vector2(col2.offset.x, -1.65f);
+        //    r2.position = new Vector2(r2.position.x, -3);
+        //    //transform.position = new Vector3(transform.position.x, -3, transform.position.z);
+        //    //r2.velocity = new Vector2(transform.localPosition.x, transform.localPosition.y);
+        //}
+        //else
+        //{
+        //    sitdown = false;
+        //    col2.size = new Vector2(col2.size.x, 5.33333f);
+        //    col2.offset = new Vector2(col2.offset.x, 0);
+        //}
         //sitdown = false;
         if (r2.velocity.x > maxspeed)
             r2.velocity = new Vector2(maxspeed, r2.velocity.y);// giới hạn tốc độ khi về phía bên phải
@@ -47,12 +49,12 @@ public class Player2 : MonoBehaviour
         if (r2.velocity.x < -maxspeed)
             r2.velocity = new Vector2(-maxspeed, r2.velocity.y);// giới hạn tốc độ khi về phía bên trái
 
-        if (h > 0 && faceright)
+        if (h < 0 && faceright)
         {
             Flip();
         }
 
-        if (h < 0 && !faceright)
+        if (h > 0 && !faceright)
         {
             Flip();
         }
@@ -69,8 +71,8 @@ public class Player2 : MonoBehaviour
 
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
         anim.SetBool("grounded", grounded);
-        anim.SetBool("sitdown", sitdown);
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        //anim.SetBool("sitdown", sitdown);
+        if (Input.GetKeyDown(KeyCode.W))
         {
             //r2.AddForce(Vector2.up * jumpPow);
             //Debug.Log(grounded);
@@ -78,20 +80,10 @@ public class Player2 : MonoBehaviour
             {
                 //Debug.Log("vao nhay");
                 grounded = false;
-                doublejump = true;
+                //doublejump = true;
                 r2.AddForce(Vector2.up * jumpPow);
 
-               /// Debug.Log(Vector2.up);
-            }
-            else
-            {
-                if (doublejump == true)
-                {
-                    doublejump = false;
-                    grounded = false;
-                    r2.velocity = new Vector2(r2.velocity.x, 0);
-                    r2.AddForce(Vector2.up * jumpPow*0.7f);
-                }
+                /// Debug.Log(Vector2.up);
             }
         }
     }
