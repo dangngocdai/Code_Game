@@ -6,7 +6,9 @@ public class Player3 : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 100f, maxspeed = 4, jumpPow = 320f;
-    public bool grounded = true, faceright = true, sitdown = false;
+    public bool grounded = true, faceright = true, sitdown = false, smile = false;
+
+    public float timedelay = 1;
 
     public Rigidbody2D r2;
     public Animator anim;
@@ -72,6 +74,15 @@ public class Player3 : MonoBehaviour
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
         anim.SetBool("grounded", grounded);
         anim.SetBool("sitdown", sitdown);
+        anim.SetBool("smile", smile);
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            smile = true;
+            ////yield return new WaitForSeconds(timedelay);
+            //smile = false;
+
+        }
         //anim.SetBool("sitdown", sitdown);
         if (Input.GetKeyDown(KeyCode.W))
         {
