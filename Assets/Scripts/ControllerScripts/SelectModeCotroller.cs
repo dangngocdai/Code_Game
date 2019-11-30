@@ -6,7 +6,7 @@ public class SelectModeCotroller : MonoBehaviour
 {
     public void PlayGame()
     {
-        Application.LoadLevel("SampleScene");
+        Application.LoadLevel("SelectCharater");
     }
     public void BackToMenu()
     {
