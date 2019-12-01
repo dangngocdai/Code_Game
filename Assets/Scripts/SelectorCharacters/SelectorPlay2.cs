@@ -25,6 +25,11 @@ public class SelectorPlay2 : MonoBehaviour
         NhanVat5Render = NhanVat5.GetComponent<SpriteRenderer>();
     }
 
+    private void Start()
+    {
+        PlayerPrefs.SetInt(selectedCharaterPlayer2, 2);
+    }
+
     public void NextCharacter()
     {
         switch (CharacterInt)

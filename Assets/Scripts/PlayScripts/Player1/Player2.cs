@@ -21,9 +21,9 @@ public class Player2 : MonoBehaviour
     private void FixedUpdate()
     {
 
-        float h = Input.GetAxis("Player2DiChuyen");// lấy thuộc tính Horizontal trong Input
+        float h = Input.GetAxis("Player1DiChuyen");// lấy thuộc tính Horizontal trong Input
         if (!sitdown) r2.AddForce((Vector2.right) * speed * h);
-        float up = Input.GetAxis("Player2Ngoi");
+        float up = Input.GetAxis("Player1Ngoi");
         if (up < 0)
         {
             sitdown = true;
@@ -47,12 +47,12 @@ public class Player2 : MonoBehaviour
         if (r2.velocity.x < -maxspeed)
             r2.velocity = new Vector2(-maxspeed, r2.velocity.y);// giới hạn tốc độ khi về phía bên trái
 
-        if (h > 0 && faceright)
+        if (h < 0 && faceright)
         {
             Flip();
         }
 
-        if (h < 0 && !faceright)
+        if (h > 0 && !faceright)
         {
             Flip();
         }
@@ -70,7 +70,7 @@ public class Player2 : MonoBehaviour
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
         anim.SetBool("grounded", grounded);
         anim.SetBool("sitdown", sitdown);
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             //r2.AddForce(Vector2.up * jumpPow);
             //Debug.Log(grounded);

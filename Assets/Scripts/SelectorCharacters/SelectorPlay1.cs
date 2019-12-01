@@ -23,13 +23,16 @@ public class SelectorPlay1 : MonoBehaviour
         NhanVat4Render = NhanVat4.GetComponent<SpriteRenderer>();
         NhanVat5Render = NhanVat5.GetComponent<SpriteRenderer>();
     }
-
+    private void Start()
+    {
+        PlayerPrefs.SetInt(selectedCharaterPlayer1, 2);
+    }
     public void NextCharacter()
     {
         switch (CharacterInt)
         {
             case 1:
-                PlayerPrefs.SetInt(selectedCharaterPlayer1, 2);
+                PlayerPrefs.SetInt(selectedCharaterPlayer1, 3);
                 NhanVat2Render.enabled = false;
                 NhanVat2.transform.position = OffScreen;
                 NhanVat3.transform.position = CharacterPosition;
@@ -38,7 +41,7 @@ public class SelectorPlay1 : MonoBehaviour
                 Debug.Log(CharacterInt);
                 break;
             case 2:
-                PlayerPrefs.SetInt(selectedCharaterPlayer1, 3);
+                PlayerPrefs.SetInt(selectedCharaterPlayer1, 4);
                 NhanVat3Render.enabled = false;
                 NhanVat3.transform.position = OffScreen;
                 NhanVat4.transform.position = CharacterPosition;
@@ -47,7 +50,7 @@ public class SelectorPlay1 : MonoBehaviour
                 Debug.Log(CharacterInt);
                 break;
             case 3:
-                PlayerPrefs.SetInt(selectedCharaterPlayer1, 4);
+                PlayerPrefs.SetInt(selectedCharaterPlayer1, 5);
                 NhanVat4Render.enabled = false;
                 NhanVat4.transform.position = OffScreen;
                 NhanVat5.transform.position = CharacterPosition;
@@ -56,7 +59,7 @@ public class SelectorPlay1 : MonoBehaviour
                 Debug.Log(CharacterInt);
                 break;
             case 4:
-                PlayerPrefs.SetInt(selectedCharaterPlayer1, 5);
+                PlayerPrefs.SetInt(selectedCharaterPlayer1, 2);
                 NhanVat5Render.enabled = false;
                 NhanVat5.transform.position = OffScreen;
                 NhanVat2.transform.position = CharacterPosition;
@@ -76,7 +79,7 @@ public class SelectorPlay1 : MonoBehaviour
         switch (CharacterInt)
         {
             case 1:
-                PlayerPrefs.SetInt(selectedCharaterPlayer1, 2);
+                PlayerPrefs.SetInt(selectedCharaterPlayer1, 5);
                 NhanVat2Render.enabled = false;
                 NhanVat2.transform.position = OffScreen;
                 NhanVat5.transform.position = CharacterPosition;
@@ -85,7 +88,7 @@ public class SelectorPlay1 : MonoBehaviour
                 RersetCharacterInt1();
                 break;
             case 2:
-                PlayerPrefs.SetInt(selectedCharaterPlayer1, 3);
+                PlayerPrefs.SetInt(selectedCharaterPlayer1, 2);
                 NhanVat3Render.enabled = false;
                 NhanVat3.transform.position = OffScreen;
                 NhanVat2.transform.position = CharacterPosition;
@@ -93,7 +96,7 @@ public class SelectorPlay1 : MonoBehaviour
                 CharacterInt--;
                 break;
             case 3:
-                PlayerPrefs.SetInt(selectedCharaterPlayer1, 4);
+                PlayerPrefs.SetInt(selectedCharaterPlayer1, 3);
                 NhanVat4Render.enabled = false;
                 NhanVat4.transform.position = OffScreen;
                 NhanVat3.transform.position = CharacterPosition;
@@ -101,7 +104,7 @@ public class SelectorPlay1 : MonoBehaviour
                 CharacterInt--;
                 break;
             case 4:
-                PlayerPrefs.SetInt(selectedCharaterPlayer1, 5);
+                PlayerPrefs.SetInt(selectedCharaterPlayer1, 4);
                 NhanVat5Render.enabled = false;
                 NhanVat5.transform.position = OffScreen;
                 NhanVat4.transform.position = CharacterPosition;

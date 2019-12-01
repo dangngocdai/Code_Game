@@ -26,7 +26,7 @@ public class TestFollowCam : MonoBehaviour
         Move();
         //Zoom();
         float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoomLimiter);
-        Debug.Log(newZoom);
+        //Debug.Log(newZoom);
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);
         //SetCameraSize();
     }
