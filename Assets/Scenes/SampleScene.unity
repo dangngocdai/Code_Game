@@ -357,12 +357,12 @@ GameObject:
   - component: {fileID: 167257175}
   - component: {fileID: 167257174}
   - component: {fileID: 167257173}
-  - component: {fileID: 167257172}
   - component: {fileID: 167257171}
-  - component: {fileID: 167257170}
   - component: {fileID: 167257169}
+  - component: {fileID: 167257172}
+  - component: {fileID: 167257170}
   m_Layer: 0
-  m_Name: NhanVat2
+  m_Name: NhanVat2a
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,7 +410,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 167257167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee4bc5071ceb2644fa270f8b871a05a4, type: 3}
+  m_Script: {fileID: 11500000, guid: bbf7ce752951990409236b41eaad9b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 167257167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21274cbb1c2f6e44db152113b54eda4c, type: 3}
+  m_Script: {fileID: 11500000, guid: f528aa875183a6042ad814ffb0f2b7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
@@ -1227,11 +1227,11 @@ GameObject:
   - component: {fileID: 624145472}
   - component: {fileID: 624145471}
   - component: {fileID: 624145470}
+  - component: {fileID: 624145467}
   - component: {fileID: 624145469}
   - component: {fileID: 624145468}
-  - component: {fileID: 624145467}
   m_Layer: 0
-  m_Name: NhanVat3
+  m_Name: NhanVat3a
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 624145465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3b39b75f9bd39c4ca1a45fb60cdb3b9, type: 3}
+  m_Script: {fileID: 11500000, guid: c378b095600f820418c6e496475b9646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
@@ -1292,17 +1292,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 624145465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b81fb3766cef87e479372037056222cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 634e065ad9c480b4d96c8fb695a72387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
   maxspeed: 4
-  jumpPow: 320
+  jumpPow: 300
   grounded: 1
   faceright: 1
+  doublejump: 0
   sitdown: 0
-  smile: 0
-  timedelay: 1
   r2: {fileID: 0}
   anim: {fileID: 0}
   col2: {fileID: 0}
