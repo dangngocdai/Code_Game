@@ -21,9 +21,9 @@ public class Player2 : MonoBehaviour
     private void FixedUpdate()
     {
 
-        float h = Input.GetAxis("Player1DiChuyen");// lấy thuộc tính Horizontal trong Input
+        float h = Input.GetAxis("Player3DiChuyen");// lấy thuộc tính Horizontal trong Input
         if (!sitdown) r2.AddForce((Vector2.right) * speed * h);
-        float up = Input.GetAxis("Player1Ngoi");
+        float up = Input.GetAxis("Player3Ngoi");
         if (up < 0)
         {
             sitdown = true;
