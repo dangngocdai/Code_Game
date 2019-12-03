@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Grounded
+  - Player2
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,8 @@ public class TestFollowCam : MonoBehaviour
 {
     public List<Transform> targets;
 
+
+
     public Vector3 offset;
     public float smoothTime = 0.5f;
 

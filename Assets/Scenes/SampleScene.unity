@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 167257170}
   m_Layer: 0
   m_Name: NhanVat2a
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1206,8 +1206,8 @@ MonoBehaviour:
   targets:
   - {fileID: 36991756}
   - {fileID: 336931255}
-  - {fileID: 1127809919}
-  - {fileID: 760268193}
+  - {fileID: 167257168}
+  - {fileID: 624145466}
   offset: {x: 0, y: 1.65, z: -20.97}
   smoothTime: 0.5
   minZoom: 70
@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 624145468}
   m_Layer: 0
   m_Name: NhanVat3a
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1802,8 +1802,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51b7a547dc14c84b8b4b188a91bd7d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NhanVat2: {fileID: 0}
-  NhanVat4: {fileID: 0}
+  NhanVat2: {fileID: 167257167}
+  NhanVat3: {fileID: 624145465}
 --- !u!1 &965393933
 GameObject:
   m_ObjectHideFlags: 0
