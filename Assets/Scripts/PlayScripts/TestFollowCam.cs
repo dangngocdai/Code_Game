@@ -19,8 +19,40 @@ public class TestFollowCam : MonoBehaviour
     private Camera cam;
     private void Start()
     {
+        
         cam = gameObject.GetComponent<Camera>();
+        //targets.Add
     }
+
+    /*GameObject selectPlayer(int getCharacter,bool player1)
+    {
+        GameObject a;
+        switch (getCharacter)
+        {
+            case 1:
+                {
+                    if (player1)
+                    {
+                        a = GameObject.Find("Player1/Player2.cs");
+                    }
+                    break;
+                }
+            case 2:
+                {
+                    break;
+                }
+            case 3:
+                {
+                    break;
+                }
+            case 4:
+                {
+                    break;
+                }
+        }
+
+        return a;
+    }*/
     private void LateUpdate()
     {
         if (targets.Count == 0)
@@ -57,7 +89,8 @@ public class TestFollowCam : MonoBehaviour
         var bounds = new Bounds(targets[0].position, Vector3.zero);
         for (int i = 0; i < targets.Count; i++)
         {
-            bounds.Encapsulate(targets[i].position);
+            if (targets[i] != null)
+                bounds.Encapsulate(targets[i].position);
         }
         return bounds.size.x;
     }
@@ -78,6 +111,8 @@ public class TestFollowCam : MonoBehaviour
         var bounds = new Bounds(targets[0].position, Vector3.zero);
         for(int i = 0; i< targets.Count; i++)
         {
+            Debug.Log(targets[i]);
+            if(targets[i] != null)
             bounds.Encapsulate(targets[i].position);
         }
         return bounds.center;
