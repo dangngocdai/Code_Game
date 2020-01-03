@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NhanVat2a : MonoBehaviour
+public class NhanVat3a : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 100f, maxspeed = 4, jumpPow = 300f;
@@ -71,7 +71,7 @@ public class NhanVat2a : MonoBehaviour
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
         anim.SetBool("grounded", grounded);
         anim.SetBool("sitdown", sitdown);
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //r2.AddForce(Vector2.up * jumpPow);
             //Debug.Log(grounded);

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NhanVat3a : MonoBehaviour
+public class NhanVat2a : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 100f, maxspeed = 4, jumpPow = 300f;
@@ -22,9 +22,9 @@ public class NhanVat3a : MonoBehaviour
     private void FixedUpdate()
     {
 
-        float h = Input.GetAxis("Player3DiChuyen");// lấy thuộc tính Horizontal trong Input
+        float h = Input.GetAxis("Player2DiChuyen");// lấy thuộc tính Horizontal trong Input
         if (!sitdown) r2.AddForce((Vector2.right) * speed * h);
-        float up = Input.GetAxis("Player3Ngoi");
+        float up = Input.GetAxis("Player2Ngoi");
         if (up < 0)
         {
             sitdown = true;
