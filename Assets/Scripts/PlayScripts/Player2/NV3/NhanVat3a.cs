@@ -8,9 +8,12 @@ public class NhanVat3a : MonoBehaviour
     public float speed = 100f, maxspeed = 4, jumpPow = 300f;
     public bool grounded = true, faceright = true, doublejump = false, sitdown = false;
 
+    public int Health = 100;
+
     public Rigidbody2D r2;
     public Animator anim;
     public BoxCollider2D col2;
+    public GameObject HealthBarP2;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +74,11 @@ public class NhanVat3a : MonoBehaviour
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
         anim.SetBool("grounded", grounded);
         anim.SetBool("sitdown", sitdown);
+        
+        if(Health <= 0)
+        {
+            Destroy(gameObject);
+        }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //r2.AddForce(Vector2.up * jumpPow);
@@ -105,5 +113,15 @@ public class NhanVat3a : MonoBehaviour
         Scale.x *= -1;
         transform.localScale = Scale;
 
+    }
+
+    void Damage(int dmg)
+    {
+        Health -= dmg;
+        Transform bar = HealthBarP2.transform.Find("Bar");
+        float c = (float)Health / (float)100;
+        if(c>0)
+        bar.localScale = new Vector3(-(c), 1f);
+        else bar.localScale = new Vector3(0, 1f);
     }
 }
