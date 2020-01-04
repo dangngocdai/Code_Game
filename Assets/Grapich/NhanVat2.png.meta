@@ -284,7 +284,7 @@ TextureImporter:
         width: 83
         height: 57
       alignment: 9
-      pivot: {x: 0.7332727, y: 0.75911564}
+      pivot: {x: 0.7156438, y: 0.63076514}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -983,8 +983,8 @@ TextureImporter:
         y: 241
         width: 74
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.715684, y: 0.5362736}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1003,8 +1003,8 @@ TextureImporter:
         y: 241
         width: 93
         height: 89
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.67161936, y: 0.4510906}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1019,12 +1019,12 @@ TextureImporter:
       name: NhanVat2_43
       rect:
         serializedVersion: 2
-        x: 200
-        y: 241
+        x: 201
+        y: 240
         width: 93
         height: 93
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.53120387, y: 0.46879628}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1043,8 +1043,8 @@ TextureImporter:
         y: 241
         width: 50
         height: 104
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.61607724, y: 0.41629058}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

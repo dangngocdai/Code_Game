@@ -6,10 +6,11 @@ public class Player2 : MonoBehaviour
 {
     public float speed = 100f, maxspeed = 4, jumpPow = 300f;
     public bool grounded = true, faceright = true, doublejump = false, sitdown = false, defense = false;
-
+    public int Health = 100;
     public Rigidbody2D r2;
     public Animator anim;
     public BoxCollider2D col2;
+    public GameObject HealthBarP1;
     // Start is called before the first frame update
     void Start()
     {
@@ -112,5 +113,14 @@ public class Player2 : MonoBehaviour
         Scale.x *= -1;
         transform.localScale = Scale;
 
+    }
+    void Damage(int dmg)
+    {
+        Health -= dmg;
+        Transform bar = HealthBarP1.transform.Find("Bar");
+        float c = (float)Health / (float)100;
+        if (c > 0)
+            bar.localScale = new Vector3(c, 1f);
+        else bar.localScale = new Vector3(0, 1f);
     }
 }

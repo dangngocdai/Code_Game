@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackHand : MonoBehaviour
+public class AttackHandP2 : MonoBehaviour
 {
     public float attackdelay = 0.3f;
     public bool attacking = false;
@@ -10,6 +10,7 @@ public class AttackHand : MonoBehaviour
     public Animator anim;
 
     public Collider2D trigger;
+    //public int player;
 
     private void Awake()
     {
@@ -22,7 +23,7 @@ public class AttackHand : MonoBehaviour
     {
         bool checkgrounded = anim.GetBool("grounded");
         bool checksitdown = anim.GetBool("sitdown");
-        if (Input.GetKeyDown(KeyCode.J) && !attacking && checkgrounded && !checksitdown)
+        if (Input.GetKeyDown(KeyCode.Keypad1) && !attacking && checkgrounded && !checksitdown)
         {
             attacking = true;
             trigger.enabled = true;
@@ -42,4 +43,18 @@ public class AttackHand : MonoBehaviour
         }
         anim.SetBool("attackhand", attacking);
     }
+
+    //private bool CheckKeyDown()
+    //{
+    //    bool Key = false;
+    //    if (player == 1)
+    //    {
+    //        Key = Input.GetKeyDown(KeyCode.J);
+    //    }
+    //    if (player == 2)
+    //    {
+    //        Key = Input.GetKeyDown(KeyCode.Keypad1);
+    //    }
+    //    return Key;
+    //}
 }

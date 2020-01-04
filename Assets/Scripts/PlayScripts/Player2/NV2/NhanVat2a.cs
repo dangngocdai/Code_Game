@@ -6,7 +6,7 @@ public class NhanVat2a : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 100f, maxspeed = 4, jumpPow = 300f;
-    public bool grounded = true, faceright = true, doublejump = false, sitdown = false;
+    public bool grounded = true, faceright = true, doublejump = false, sitdown = false, defense = false;
     public int Health = 100;
     public Rigidbody2D r2;
     public Animator anim;
@@ -24,9 +24,9 @@ public class NhanVat2a : MonoBehaviour
     {
 
         float h = Input.GetAxis("Player2DiChuyen");// lấy thuộc tính Horizontal trong Input
-        if (!sitdown) r2.AddForce((Vector2.right) * speed * h);
+        if (!sitdown && !defense) r2.AddForce((Vector2.right) * speed * h);
         float up = Input.GetAxis("Player2Ngoi");
-        if (up < 0)
+        if (up < 0 && !defense)
         {
             sitdown = true;
             r2.velocity = new Vector2(0, r2.velocity.y);
@@ -62,17 +62,23 @@ public class NhanVat2a : MonoBehaviour
         {
             r2.velocity = new Vector2(r2.velocity.x * 0.7f, r2.velocity.y); // tạo ma sát
         }
-
+        //Player2PhongThu
+        //Debug.Log(Input.GetAxis("Player3PhongThu"));
+        if (Input.GetAxis("Player2PhongThu") < 0)
+        {
+            defense = true;
+        }
+        else defense = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
         anim.SetBool("grounded", grounded);
         anim.SetBool("sitdown", sitdown);
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        anim.SetBool("defense", defense);
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !defense)
         {
             //r2.AddForce(Vector2.up * jumpPow);
             //Debug.Log(grounded);

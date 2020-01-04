@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerFoot : MonoBehaviour
+public class TriggerFootP1 : MonoBehaviour
 {
     public int dmg = 5;
     // Start is called before the first frame update

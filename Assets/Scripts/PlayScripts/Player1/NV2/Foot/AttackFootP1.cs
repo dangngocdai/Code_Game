@@ -1,0 +1,72 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AttackFootP1 : MonoBehaviour
+{
+    public bool attacking = false;
+
+    public Animator anim;
+
+    public Collider2D triggerNgoi;
+    public Collider2D triggerDung;
+    //public int player;
+
+    private void Awake()
+    {
+        anim = gameObject.GetComponent<Animator>();
+        triggerNgoi.enabled = false;
+        triggerDung.enabled = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        bool checkgrounded = anim.GetBool("grounded");
+        bool checksitdown = anim.GetBool("sitdown");
+        
+        if (Input.GetKeyDown(KeyCode.K) && !attacking && checkgrounded)
+        {
+            attacking = true;
+            if (checksitdown)
+            {
+                triggerNgoi.enabled = true;
+                StartCoroutine(DelayDa(0.3f, checksitdown));
+            }
+            else {
+                triggerDung.enabled = true;
+                StartCoroutine(DelayDa(0.5f, checksitdown)); }
+
+        }
+        anim.SetBool("attackfoot", attacking);
+    }
+
+    IEnumerator DelayDa(float time, bool checksitdown)
+    {
+        yield return new WaitForSeconds(time);
+        if (checksitdown)
+        {
+            triggerNgoi.enabled = false;
+        }
+        else
+        {
+            triggerDung.enabled = false;
+        }
+        attacking = false;
+    }
+
+    /*private bool CheckKeyDown()
+    {
+        bool Key = false;
+        if(player == 1)
+        {
+            Key = Input.GetKeyDown(KeyCode.K);
+        }
+        if (player == 2)
+        {
+            
+            Key = Input.GetKeyDown(KeyCode.Keypad2);
+        }
+        return Key;
+    }*/
+}
