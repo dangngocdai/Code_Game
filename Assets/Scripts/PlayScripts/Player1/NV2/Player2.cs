@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player2 : MonoBehaviour
 {
     public float speed = 100f, maxspeed = 4, jumpPow = 300f;
-    public bool grounded = true, faceright = true, doublejump = false, sitdown = false;
+    public bool grounded = true, faceright = true, doublejump = false, sitdown = false, defense = false;
 
     public Rigidbody2D r2;
     public Animator anim;
@@ -22,9 +22,9 @@ public class Player2 : MonoBehaviour
     {
 
         float h = Input.GetAxis("Player3DiChuyen");// lấy thuộc tính Horizontal trong Input
-        if (!sitdown) r2.AddForce((Vector2.right) * speed * h);
+        if (!sitdown && !defense) r2.AddForce((Vector2.right) * speed * h);
         float up = Input.GetAxis("Player3Ngoi");
-        if (up < 0)
+        if (up < 0 && !defense)
         {
             sitdown = true;
             r2.velocity = new Vector2(0, r2.velocity.y);
@@ -60,6 +60,13 @@ public class Player2 : MonoBehaviour
         {
             r2.velocity = new Vector2(r2.velocity.x * 0.7f, r2.velocity.y); // tạo ma sát
         }
+        //Player3PhongThu
+        Debug.Log(Input.GetAxis("Player3PhongThu"));
+        if (Input.GetAxis("Player3PhongThu") < 0)
+        {
+            defense = true;
+        }
+        else defense = false;
 
     }
 
@@ -70,7 +77,8 @@ public class Player2 : MonoBehaviour
         anim.SetFloat("speed", Mathf.Abs(r2.velocity.x));
         anim.SetBool("grounded", grounded);
         anim.SetBool("sitdown", sitdown);
-        if (Input.GetKeyDown(KeyCode.W))
+        anim.SetBool("defense", defense);
+        if (Input.GetKeyDown(KeyCode.W) && !defense)
         {
             //r2.AddForce(Vector2.up * jumpPow);
             //Debug.Log(grounded);
