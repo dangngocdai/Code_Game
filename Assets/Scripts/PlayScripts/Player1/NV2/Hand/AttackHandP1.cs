@@ -23,7 +23,8 @@ public class AttackHandP1 : MonoBehaviour
     {
         bool checkgrounded = anim.GetBool("grounded");
         bool checksitdown = anim.GetBool("sitdown");
-        if (Input.GetKeyDown(KeyCode.J) && !attacking && checkgrounded && !checksitdown)
+        bool checkdefense = anim.GetBool("defense");
+        if (Input.GetKeyDown(KeyCode.J) && !attacking && checkgrounded && !checksitdown &&!checkdefense)
         {
             attacking = true;
             trigger.enabled = true;

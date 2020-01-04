@@ -116,7 +116,29 @@ public class Player2 : MonoBehaviour
     }
     void Damage(int dmg)
     {
+        bool checkdefense = anim.GetBool("defense");
+        if (checkdefense)
+        {
+            Health -= 1;
+        }
+        else
         Health -= dmg;
+        Transform bar = HealthBarP1.transform.Find("Bar");
+        float c = (float)Health / (float)100;
+        if (c > 0)
+            bar.localScale = new Vector3(c, 1f);
+        else bar.localScale = new Vector3(0, 1f);
+    }
+
+    void DamageSkill(int dmg)
+    {
+        bool checkdefense = anim.GetBool("defense");
+        if (checkdefense)
+        {
+            Health -= 5;
+        }
+        else
+            Health -= dmg;
         Transform bar = HealthBarP1.transform.Find("Bar");
         float c = (float)Health / (float)100;
         if (c > 0)
