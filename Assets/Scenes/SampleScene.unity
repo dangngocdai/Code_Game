@@ -281,10 +281,12 @@ MonoBehaviour:
   sitdown: 0
   defense: 0
   Health: 100
+  Mana: 100
   r2: {fileID: 0}
   anim: {fileID: 0}
   col2: {fileID: 0}
   HealthBarP1: {fileID: 1197721478}
+  ManaBarP1: {fileID: 728769392}
 --- !u!50 &36991759
 Rigidbody2D:
   serializedVersion: 4
@@ -1991,7 +1993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74.7, y: -0}
+  m_AnchoredPosition: {x: 74.7, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &570004153

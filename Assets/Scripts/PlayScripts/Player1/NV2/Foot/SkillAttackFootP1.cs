@@ -26,6 +26,8 @@ public class SkillAttackFootP1 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.I) && !attacking && checkgrounded && !checksitdown&& !checkdefense)
         {
+            Player2.Mana = Player2.Mana - 20;
+            Debug.Log(Player2.Mana);
             attacking = true;
             StartCoroutine(DelayDa(0.3f, false));
             StartCoroutine(DelayDa(0.7f,true));

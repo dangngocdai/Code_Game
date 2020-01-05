@@ -7,10 +7,12 @@ public class Player2 : MonoBehaviour
     public float speed = 100f, maxspeed = 4, jumpPow = 300f;
     public bool grounded = true, faceright = true, doublejump = false, sitdown = false, defense = false;
     public int Health = 100;
+    public static int Mana = 100;
     public Rigidbody2D r2;
     public Animator anim;
     public BoxCollider2D col2;
     public GameObject HealthBarP1;
+    public GameObject ManaBarP1;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,12 +64,24 @@ public class Player2 : MonoBehaviour
             r2.velocity = new Vector2(r2.velocity.x * 0.7f, r2.velocity.y); // tạo ma sát
         }
         //Player3PhongThu
-        Debug.Log(Input.GetAxis("Player3PhongThu"));
         if (Input.GetAxis("Player3PhongThu") < 0)
         {
             defense = true;
         }
         else defense = false;
+
+
+        if (Mana < 100)
+        {
+            Debug.Log(1);
+            HoiMana();
+        }
+
+        Transform bar = ManaBarP1.transform.Find("Bar");
+        float c = (float)Mana / (float)100;
+        if (c > 0)
+            bar.localScale = new Vector3(c, 1f);
+        else bar.localScale = new Vector3(0, 1f);
 
     }
 
@@ -144,5 +158,11 @@ public class Player2 : MonoBehaviour
         if (c > 0)
             bar.localScale = new Vector3(c, 1f);
         else bar.localScale = new Vector3(0, 1f);
+    }
+
+    IEnumerator HoiMana()
+    {
+        yield return new WaitForSeconds(1f);
+        Mana = Mana + 2;
     }
 }
