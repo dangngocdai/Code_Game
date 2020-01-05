@@ -7,12 +7,22 @@ public class SettingCanvas : MonoBehaviour
 {
     public Text NamePlay1;
     public Text NamePlay2;
+    public Text TextTime;
+    public Text NamePlayWin;
+    public GameObject Win;
+
+    public GameObject HealthBarP1;
+    public GameObject HealthBarP2;
+
+    private float Times;
+    private float TimeDelay = 1f;
 
     private readonly string NamePlayer1 = "NamePlayer1";
     private readonly string NamePlayer2 = "NamePlayer2";
-    
+    private readonly string TimePlay = "TimePlay";
     void Start()
     {
+        Win.SetActive(false);
         string NameP1 = PlayerPrefs.GetString(NamePlayer1);
         if(NameP1 == "")
         {
@@ -32,11 +42,51 @@ public class SettingCanvas : MonoBehaviour
         {
             NamePlay2.text = NameP2;
         }
+
+        string StringTime = PlayerPrefs.GetString(TimePlay);
+        if(StringTime == "60s")
+        {
+            Times = 60;
+        }
+        if(StringTime == "90s")
+        {
+            Times = 90;
+        }
+        if(StringTime == "88")
+        {
+            Times = 88;
+        }
+        TextTime.text = Times.ToString();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        float HealthP1 = HealthBarP1.transform.Find("Bar").localScale.x;
+        float HealthP2 = HealthBarP2.transform.Find("Bar").localScale.x;
+        if(Times == 0 || HealthP1 == 0 || HealthP2 == 0)
+        {
+            if(HealthP1 < HealthP2)
+            {
+                NamePlayWin.text = NamePlay2.text;
+            }
+            else NamePlayWin.text = NamePlay1.text;
+            Win.SetActive(true);
+            Time.timeScale = 0;
+        }
+        if(Times != 88)
+        {
+            if(Times > 0) {
+                Times -= Time.deltaTime;
+                int T = (int)Times;
+                TextTime.text = T.ToString();
+            }
+            else
+            {
+                Times = 0;
+                TextTime.text = Times.ToString();
+            }
+        }
     }
 }
