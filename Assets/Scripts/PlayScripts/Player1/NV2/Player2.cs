@@ -13,6 +13,8 @@ public class Player2 : MonoBehaviour
     public BoxCollider2D col2;
     public GameObject HealthBarP1;
     public GameObject ManaBarP1;
+
+    private float TimeDelayMana = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,13 +71,7 @@ public class Player2 : MonoBehaviour
             defense = true;
         }
         else defense = false;
-
-
-        if (Mana < 100)
-        {
-            Debug.Log(1);
-            HoiMana();
-        }
+        
 
         Transform bar = ManaBarP1.transform.Find("Bar");
         float c = (float)Mana / (float)100;
@@ -116,6 +112,22 @@ public class Player2 : MonoBehaviour
                     r2.AddForce(Vector2.up * jumpPow*0.7f);
                 }
             }
+        }
+
+        //Hoi mana
+        if (Mana < 100)
+        {
+            Debug.Log(1);
+            if (TimeDelayMana > 0)
+            {
+                TimeDelayMana -= Time.deltaTime;
+            }
+            else
+            {
+                Mana = Mana + 2;
+                TimeDelayMana = 1f;
+            }
+            //HoiMana();
         }
     }
 
@@ -160,9 +172,9 @@ public class Player2 : MonoBehaviour
         else bar.localScale = new Vector3(0, 1f);
     }
 
-    IEnumerator HoiMana()
-    {
-        yield return new WaitForSeconds(1f);
-        Mana = Mana + 2;
-    }
+    //IEnumerator HoiMana()
+    //{
+    //    yield return new WaitForSeconds(1f);
+    //    Mana = Mana + 2;
+    //}
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillAttackFootP1 : MonoBehaviour
+public class SkillAttackFootP2 : MonoBehaviour
 {
     public bool attacking = false;
 
@@ -24,10 +24,10 @@ public class SkillAttackFootP1 : MonoBehaviour
         bool checksitdown = anim.GetBool("sitdown");
         bool checkdefense = anim.GetBool("defense");
 
-        if (Input.GetKeyDown(KeyCode.I) && !attacking && checkgrounded && !checksitdown&& !checkdefense&& Player2.Mana > 20)
+        if (Input.GetKeyDown(KeyCode.Keypad5) && !attacking && checkgrounded && !checksitdown&& !checkdefense && NhanVat2a.Mana>20)
         {
-            Player2.Mana = Player2.Mana - 20;
-            Debug.Log(Player2.Mana);
+            NhanVat2a.Mana = NhanVat2a.Mana - 20;
+            Debug.Log(NhanVat2a.Mana);
             attacking = true;
             StartCoroutine(DelayDa(0.3f, false));
             StartCoroutine(DelayDa(0.7f,true));
