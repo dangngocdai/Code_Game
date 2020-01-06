@@ -33,7 +33,7 @@ public class Player2 : MonoBehaviour
         float h = Input.GetAxis("Player3DiChuyen");// lấy thuộc tính Horizontal trong Input
         if (!sitdown && !defense) r2.AddForce((Vector2.right) * speed * h);
         float up = Input.GetAxis("Player3Ngoi");
-        if (up < 0 && !defense)
+        if (up < 0 && !defense && !luot)
         {
             sitdown = true;
             r2.velocity = new Vector2(0, r2.velocity.y);
@@ -94,7 +94,7 @@ public class Player2 : MonoBehaviour
         anim.SetBool("sitdown", sitdown);
         anim.SetBool("defense", defense);
         anim.SetBool("luot", luot);
-        if (Input.GetKeyDown(KeyCode.W) && !defense)
+        if (Input.GetKeyDown(KeyCode.W) && !defense && !luot)
         {
             //r2.AddForce(Vector2.up * jumpPow);
             //Debug.Log(grounded);

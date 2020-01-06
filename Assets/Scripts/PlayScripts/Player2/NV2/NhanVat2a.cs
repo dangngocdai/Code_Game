@@ -14,7 +14,7 @@ public class NhanVat2a : MonoBehaviour
     public BoxCollider2D col2;
     public GameObject HealthBarP2;
     public GameObject ManaBarP2;
-
+    private readonly string selectedCharaterPlayer1 = "selectedCharaterPlayer1";
     private float TimeDelayMana = 1;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,10 @@ public class NhanVat2a : MonoBehaviour
         r2 = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         col2 = gameObject.GetComponent<BoxCollider2D>();
+        if(PlayerPrefs.GetInt(selectedCharaterPlayer1) == 2)
+        {
+            gameObject.GetComponent<SpriteRenderer>().material.color= new Color(255, 148, 148);
+        }
         Mana = 100;
         Health = 100;
     }
