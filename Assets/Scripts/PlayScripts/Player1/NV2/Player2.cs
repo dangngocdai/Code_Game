@@ -21,6 +21,8 @@ public class Player2 : MonoBehaviour
         r2 = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         col2 = gameObject.GetComponent<BoxCollider2D>();
+        Mana = 100;
+        Health = 100;
     }
 
     private void FixedUpdate()

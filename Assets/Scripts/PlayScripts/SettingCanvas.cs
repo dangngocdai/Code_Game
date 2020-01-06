@@ -63,15 +63,16 @@ public class SettingCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float HealthP1 = HealthBarP1.transform.Find("Bar").localScale.x;
-        float HealthP2 = HealthBarP2.transform.Find("Bar").localScale.x;
+        float HealthP1 = Mathf.Abs(HealthBarP1.transform.Find("Bar").localScale.x);
+        float HealthP2 =Mathf.Abs( HealthBarP2.transform.Find("Bar").localScale.x);
         if(Times == 0 || HealthP1 == 0 || HealthP2 == 0)
         {
             if(HealthP1 < HealthP2)
             {
                 NamePlayWin.text = NamePlay2.text;
             }
-            else NamePlayWin.text = NamePlay1.text;
+            if (HealthP1 > HealthP2)
+                NamePlayWin.text = NamePlay1.text;
             Win.SetActive(true);
             Time.timeScale = 0;
         }
