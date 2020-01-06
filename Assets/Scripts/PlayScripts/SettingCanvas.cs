@@ -57,7 +57,6 @@ public class SettingCanvas : MonoBehaviour
             Times = 88;
         }
         TextTime.text = Times.ToString();
-
     }
 
     // Update is called once per frame

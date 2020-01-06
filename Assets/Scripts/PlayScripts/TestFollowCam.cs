@@ -59,9 +59,17 @@ public class TestFollowCam : MonoBehaviour
             return;
         Move();
         //Zoom();
-        float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoomLimiter);
-        //Debug.Log(newZoom);
-        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);
+        if(cam.fieldOfView >= 25)
+        {
+            float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoomLimiter);
+            //Debug.Log(newZoom);
+            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);
+        }
+        else
+        {
+            cam.fieldOfView = 25;
+        }
+        
         //SetCameraSize();
     }
 

@@ -25,7 +25,9 @@ public class AttackFootP1 : MonoBehaviour
         bool checkgrounded = anim.GetBool("grounded");
         bool checksitdown = anim.GetBool("sitdown");
         bool checkdefense = anim.GetBool("defense");
-        if (Input.GetKeyDown(KeyCode.K) && !attacking && checkgrounded && !checkdefense)
+        bool checkAttackHand = anim.GetBool("attackhand");
+        bool checkSkillFoot = anim.GetBool("skillfoot");
+        if (Input.GetKeyDown(KeyCode.K) && !attacking && checkgrounded && !checkdefense && !checkAttackHand && !checkSkillFoot)
         {
             attacking = true;
             if (checksitdown)

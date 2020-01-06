@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player2 : MonoBehaviour
 {
     public float speed = 100f, maxspeed = 4, jumpPow = 300f;
-    public bool grounded = true, faceright = true, doublejump = false, sitdown = false, defense = false;
+    public bool grounded = true, faceright = true, doublejump = false, sitdown = false, defense = false, luot = false;
     public int Health = 100;
     public static int Mana = 100;
     public Rigidbody2D r2;
@@ -13,6 +13,8 @@ public class Player2 : MonoBehaviour
     public BoxCollider2D col2;
     public GameObject HealthBarP1;
     public GameObject ManaBarP1;
+
+    public float attackdelay = 0.3f;
 
     private float TimeDelayMana = 1;
     // Start is called before the first frame update
@@ -54,12 +56,12 @@ public class Player2 : MonoBehaviour
         if (r2.velocity.x < -maxspeed)
             r2.velocity = new Vector2(-maxspeed, r2.velocity.y);// giới hạn tốc độ khi về phía bên trái
 
-        if (h < 0 && faceright)
+        if (h < 0 && faceright && !luot)
         {
             Flip();
         }
 
-        if (h > 0 && !faceright)
+        if (h > 0 && !faceright && !luot)
         {
             Flip();
         }
@@ -91,6 +93,7 @@ public class Player2 : MonoBehaviour
         anim.SetBool("grounded", grounded);
         anim.SetBool("sitdown", sitdown);
         anim.SetBool("defense", defense);
+        anim.SetBool("luot", luot);
         if (Input.GetKeyDown(KeyCode.W) && !defense)
         {
             //r2.AddForce(Vector2.up * jumpPow);
@@ -116,6 +119,42 @@ public class Player2 : MonoBehaviour
             }
         }
 
+        // Luot
+        bool checkAttackFoot = anim.GetBool("attackfoot");
+        bool checkAttackHand = anim.GetBool("attackhand");
+        bool checkSkillFoot = anim.GetBool("skillfoot");
+        if (!sitdown && !defense && Input.GetKeyDown(KeyCode.O) && !luot && grounded && !checkAttackFoot && !checkAttackHand && !checkSkillFoot)
+        {
+            luot = true;
+            attackdelay = 0.4f;
+        }
+        if (luot)
+            {
+                if (attackdelay > 0)
+                {
+                    attackdelay -= Time.deltaTime;
+                //Transform ViTri = gameObject.GetComponent<Transform>();
+                //ViTri.position = new Vector2(ViTri.position.x + 1.5f, ViTri.position.y);
+                if (transform.localScale.x < 0)
+                {
+                    GameObject a = GameObject.FindGameObjectWithTag("Player2");
+                    Physics2D.IgnoreCollision(col2, a.GetComponent<Collider2D>(),true);
+                    r2.AddForce((Vector2.right) * 500f); }
+                if (transform.localScale.x > 0)
+                {
+                    GameObject a = GameObject.FindGameObjectWithTag("Player2");
+                    Physics2D.IgnoreCollision(col2, a.GetComponent<Collider2D>(),true);
+                    r2.AddForce((Vector2.right) * (-500f)); }
+                Physics2D.IgnoreLayerCollision(8, 9);
+            }
+                else
+                {
+                    luot = false;
+                GameObject a = GameObject.FindGameObjectWithTag("Player2");
+                Physics2D.IgnoreCollision(col2, a.GetComponent<Collider2D>(), false);
+            }
+            }
+        
         //Hoi mana
         if (Mana < 100)
         {

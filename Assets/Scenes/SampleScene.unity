@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 36991764}
   - component: {fileID: 36991766}
   - component: {fileID: 36991765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NhanVat2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -280,12 +280,14 @@ MonoBehaviour:
   doublejump: 0
   sitdown: 0
   defense: 0
+  luot: 0
   Health: 100
   r2: {fileID: 0}
   anim: {fileID: 0}
   col2: {fileID: 0}
   HealthBarP1: {fileID: 1197721478}
   ManaBarP1: {fileID: 728769392}
+  attackdelay: 0.5
 --- !u!50 &36991759
 Rigidbody2D:
   serializedVersion: 4
@@ -744,7 +746,7 @@ GameObject:
   - component: {fileID: 167257178}
   - component: {fileID: 167257177}
   - component: {fileID: 167257179}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NhanVat2a
   m_TagString: Player2
   m_Icon: {fileID: 0}
@@ -1468,7 +1470,7 @@ GameObject:
   - component: {fileID: 336931259}
   - component: {fileID: 336931258}
   - component: {fileID: 336931260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NhanVat3
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2155,7 +2157,7 @@ GameObject:
   - component: {fileID: 531492771}
   - component: {fileID: 531492772}
   - component: {fileID: 531492773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skill-J-dung
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2429,7 +2431,7 @@ GameObject:
   - component: {fileID: 624145467}
   - component: {fileID: 624145469}
   - component: {fileID: 624145468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NhanVat3a
   m_TagString: Player2
   m_Icon: {fileID: 0}
@@ -2695,7 +2697,7 @@ GameObject:
   - component: {fileID: 743790316}
   - component: {fileID: 743790314}
   - component: {fileID: 743790315}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: skill-K-dung
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2776,7 +2778,7 @@ GameObject:
   - component: {fileID: 760268196}
   - component: {fileID: 760268195}
   - component: {fileID: 760268197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NhanVat5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3067,7 +3069,7 @@ GameObject:
   - component: {fileID: 785603128}
   - component: {fileID: 785603126}
   - component: {fileID: 785603127}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: skill-J-dung
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3138,7 +3140,7 @@ GameObject:
   - component: {fileID: 792628167}
   - component: {fileID: 792628165}
   - component: {fileID: 792628166}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: skill-K-ngoi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3375,7 +3377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 918421140}
   - component: {fileID: 918421141}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CharacterPlayer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3423,7 +3425,7 @@ GameObject:
   - component: {fileID: 953284527}
   - component: {fileID: 953284525}
   - component: {fileID: 953284526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skill-I-dung
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3659,7 +3661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009484435}
   - component: {fileID: 1009484436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CharacterPlayer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3978,7 +3980,7 @@ GameObject:
   - component: {fileID: 1127809922}
   - component: {fileID: 1127809921}
   - component: {fileID: 1127809923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NhanVat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4673,7 +4675,7 @@ GameObject:
   - component: {fileID: 1654293119}
   - component: {fileID: 1654293117}
   - component: {fileID: 1654293118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: skill-I-dung
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4866,7 +4868,7 @@ GameObject:
   - component: {fileID: 1749685971}
   - component: {fileID: 1749685972}
   - component: {fileID: 1749685973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skill-K-ngoi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5233,7 +5235,7 @@ GameObject:
   - component: {fileID: 1995501585}
   - component: {fileID: 1995501587}
   - component: {fileID: 1995501586}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skill-K-dung
   m_TagString: Untagged
   m_Icon: {fileID: 0}

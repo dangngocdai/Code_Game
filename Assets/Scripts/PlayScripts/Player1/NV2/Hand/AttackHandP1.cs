@@ -24,11 +24,13 @@ public class AttackHandP1 : MonoBehaviour
         bool checkgrounded = anim.GetBool("grounded");
         bool checksitdown = anim.GetBool("sitdown");
         bool checkdefense = anim.GetBool("defense");
-        if (Input.GetKeyDown(KeyCode.J) && !attacking && checkgrounded && !checksitdown &&!checkdefense)
+        bool checkAttackFoot = anim.GetBool("attackfoot");
+        bool checkSkillFoot = anim.GetBool("skillfoot");
+        if (Input.GetKeyDown(KeyCode.J) && !attacking && checkgrounded && !checksitdown &&!checkdefense && !checkAttackFoot && !checkSkillFoot)
         {
             attacking = true;
             trigger.enabled = true;
-            attackdelay = 0.3f;
+            attackdelay = 0.4f;
         }
         if (attacking)
         {

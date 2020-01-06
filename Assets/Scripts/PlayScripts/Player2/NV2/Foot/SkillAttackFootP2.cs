@@ -23,8 +23,9 @@ public class SkillAttackFootP2 : MonoBehaviour
         bool checkgrounded = anim.GetBool("grounded");
         bool checksitdown = anim.GetBool("sitdown");
         bool checkdefense = anim.GetBool("defense");
-
-        if (Input.GetKeyDown(KeyCode.Keypad5) && !attacking && checkgrounded && !checksitdown&& !checkdefense && NhanVat2a.Mana>20)
+        bool checkAttackFoot = anim.GetBool("attackfoot");
+        bool checkAttackHand = anim.GetBool("attackhand");
+        if (Input.GetKeyDown(KeyCode.Keypad5) && !attacking && checkgrounded && !checksitdown&& !checkdefense && NhanVat2a.Mana>20 && !checkAttackFoot && !checkAttackHand)
         {
             NhanVat2a.Mana = NhanVat2a.Mana - 20;
             Debug.Log(NhanVat2a.Mana);

@@ -23,7 +23,10 @@ public class AttackHandP2 : MonoBehaviour
     {
         bool checkgrounded = anim.GetBool("grounded");
         bool checksitdown = anim.GetBool("sitdown");
-        if (Input.GetKeyDown(KeyCode.Keypad1) && !attacking && checkgrounded && !checksitdown)
+        bool checkdefense = anim.GetBool("defense");
+        bool checkAttackFoot = anim.GetBool("attackfoot");
+        bool checkSkillFoot = anim.GetBool("skillfoot");
+        if (Input.GetKeyDown(KeyCode.Keypad1) && !attacking && checkgrounded && !checksitdown && !checkdefense && !checkAttackFoot && !checkSkillFoot)
         {
             attacking = true;
             trigger.enabled = true;
