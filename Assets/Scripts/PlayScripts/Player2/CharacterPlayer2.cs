@@ -64,14 +64,14 @@ public class CharacterPlayer2 : MonoBehaviour
         switch (getCharacter)
         {
             case 2:
-                Destroy(NhanVat2);
+                //Destroy(NhanVat2);
                 Destroy(NhanVat3);
                 Destroy(NhanVat4);
                 //Destroy(NhanVat5);
                 break;
             case 3:
                 Destroy(NhanVat2);
-                Destroy(NhanVat3);
+                //Destroy(NhanVat3);
                 Destroy(NhanVat4);
                 //Destroy(NhanVat5);
                 break;
