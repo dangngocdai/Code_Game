@@ -6,7 +6,7 @@ public class NhanVat2a : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 100f, maxspeed = 4, jumpPow = 300f;
-    public bool grounded = true, faceright = true, doublejump = false, sitdown = false, defense = false;
+    public bool grounded = true, faceright = true, doublejump = false, sitdown = false, defense = false, luot = false;
     public int Health = 100;
     public static int Mana = 100;
     public Rigidbody2D r2;
@@ -14,11 +14,14 @@ public class NhanVat2a : MonoBehaviour
     public BoxCollider2D col2;
     public GameObject HealthBarP2;
     public GameObject ManaBarP2;
+    private Object ChemSkill;
     private readonly string selectedCharaterPlayer1 = "selectedCharaterPlayer1";
     private float TimeDelayMana = 1;
+    public float attackdelay = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
+        ChemSkill = Resources.Load("ChemGio");
         r2 = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         col2 = gameObject.GetComponent<BoxCollider2D>();
@@ -36,7 +39,7 @@ public class NhanVat2a : MonoBehaviour
         float h = Input.GetAxis("Player2DiChuyen");// lấy thuộc tính Horizontal trong Input
         if (!sitdown && !defense) r2.AddForce((Vector2.right) * speed * h);
         float up = Input.GetAxis("Player2Ngoi");
-        if (up < 0 && !defense)
+        if (up < 0 && !defense && !luot)
         {
             sitdown = true;
             r2.velocity = new Vector2(0, r2.velocity.y);
@@ -59,12 +62,12 @@ public class NhanVat2a : MonoBehaviour
         if (r2.velocity.x < -maxspeed)
             r2.velocity = new Vector2(-maxspeed, r2.velocity.y);// giới hạn tốc độ khi về phía bên trái
 
-        if (h > 0 && faceright)
+        if (h > 0 && faceright && !luot)
         {
             Flip();
         }
 
-        if (h < 0 && !faceright)
+        if (h < 0 && !faceright && !luot)
         {
             Flip();
         }
@@ -94,7 +97,8 @@ public class NhanVat2a : MonoBehaviour
         anim.SetBool("grounded", grounded);
         anim.SetBool("sitdown", sitdown);
         anim.SetBool("defense", defense);
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !defense)
+        anim.SetBool("luot", luot);
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !defense && !luot)
         {
             //r2.AddForce(Vector2.up * jumpPow);
             //Debug.Log(grounded);
@@ -119,6 +123,45 @@ public class NhanVat2a : MonoBehaviour
             }
         }
 
+        // Luot
+        bool checkAttackFoot = anim.GetBool("attackfoot");
+        bool checkAttackHand = anim.GetBool("attackhand");
+        bool checkSkillFoot = anim.GetBool("skillfoot");
+        if (!sitdown && !defense && Input.GetKeyDown(KeyCode.Keypad6) && !luot && grounded && !checkAttackFoot && !checkAttackHand && !checkSkillFoot && Mana > 5)
+        {
+            luot = true;
+            Mana = Mana - 5;
+            attackdelay = 0.4f;
+        }
+        if (luot)
+        {
+            if (attackdelay > 0)
+            {
+                attackdelay -= Time.deltaTime;
+                //Transform ViTri = gameObject.GetComponent<Transform>();
+                //ViTri.position = new Vector2(ViTri.position.x + 1.5f, ViTri.position.y);
+                if (transform.localScale.x < 0)
+                {
+                    GameObject a = GameObject.FindGameObjectWithTag("Player");
+                    Physics2D.IgnoreCollision(col2, a.GetComponent<Collider2D>(), true);
+                    r2.AddForce((Vector2.right) * 500f);
+                }
+                if (transform.localScale.x > 0)
+                {
+                    GameObject a = GameObject.FindGameObjectWithTag("Player");
+                    Physics2D.IgnoreCollision(col2, a.GetComponent<Collider2D>(), true);
+                    r2.AddForce((Vector2.right) * (-500f));
+                }
+                Physics2D.IgnoreLayerCollision(8, 9);
+            }
+            else
+            {
+                luot = false;
+                GameObject a = GameObject.FindGameObjectWithTag("Player");
+                Physics2D.IgnoreCollision(col2, a.GetComponent<Collider2D>(), false);
+            }
+        }
+
         //Hoi mana
         if (Mana < 100)
         {
@@ -133,6 +176,28 @@ public class NhanVat2a : MonoBehaviour
                 TimeDelayMana = 1f;
             }
             //HoiMana();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad4) && !luot && grounded && !checkAttackFoot && !checkAttackHand && !checkSkillFoot && Mana > 20)
+        {
+            Mana -= 20;
+            gameObject.GetComponent<Animator>().Play("NV2SkillTay");
+            GameObject Chem = (GameObject)Instantiate(ChemSkill);
+            ChemGio.checkPlayer1 = false;
+            if (transform.localScale.x < 0)
+            {
+                ChemGio.checkPhai = true;
+                Chem.transform.position = new Vector3(transform.position.x + 2f, transform.position.y + 1.5f, -1);
+            }
+            if (transform.localScale.x > 0)
+            {
+                ChemGio.checkPhai = false;
+                Chem.transform.position = new Vector3(transform.position.x - 2f, transform.position.y + 1.5f, -1);
+                Vector3 Scale;
+                Scale = Chem.transform.localScale;
+                Scale.x *= -1;
+                Chem.transform.localScale = Scale;
+            }
         }
     }
 
@@ -153,7 +218,10 @@ public class NhanVat2a : MonoBehaviour
             Health -= 1;
         }
         else
+        {
             Health -= dmg;
+            gameObject.GetComponent<Animator>().Play("NV2BiDanh");
+        }
         Transform bar = HealthBarP2.transform.Find("Bar");
         float c = (float)Health / (float)100;
         if (c > 0)
@@ -169,7 +237,10 @@ public class NhanVat2a : MonoBehaviour
             Health -= 5;
         }
         else
+        {
             Health -= dmg;
+            gameObject.GetComponent<Animator>().Play("NV2BiDanh");
+        }
         Transform bar = HealthBarP2.transform.Find("Bar");
         float c = (float)Health / (float)100;
         if (c > 0)

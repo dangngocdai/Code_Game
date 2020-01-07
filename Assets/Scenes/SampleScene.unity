@@ -849,12 +849,14 @@ MonoBehaviour:
   doublejump: 0
   sitdown: 0
   defense: 0
+  luot: 0
   Health: 100
   r2: {fileID: 0}
   anim: {fileID: 0}
   col2: {fileID: 0}
   HealthBarP2: {fileID: 1936613804}
   ManaBarP2: {fileID: 1275059780}
+  attackdelay: 0.3
 --- !u!50 &167257173
 Rigidbody2D:
   serializedVersion: 4
@@ -3110,7 +3112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &760268190
 Rigidbody2D:
   serializedVersion: 4

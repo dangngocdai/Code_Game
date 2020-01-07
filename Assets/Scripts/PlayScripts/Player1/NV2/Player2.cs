@@ -13,6 +13,7 @@ public class Player2 : MonoBehaviour
     public BoxCollider2D col2;
     public GameObject HealthBarP1;
     public GameObject ManaBarP1;
+    private Object ChemSkill;
 
     public float attackdelay = 0.3f;
 
@@ -20,6 +21,7 @@ public class Player2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ChemSkill = Resources.Load("ChemGio");
         r2 = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         col2 = gameObject.GetComponent<BoxCollider2D>();
@@ -123,9 +125,10 @@ public class Player2 : MonoBehaviour
         bool checkAttackFoot = anim.GetBool("attackfoot");
         bool checkAttackHand = anim.GetBool("attackhand");
         bool checkSkillFoot = anim.GetBool("skillfoot");
-        if (!sitdown && !defense && Input.GetKeyDown(KeyCode.O) && !luot && grounded && !checkAttackFoot && !checkAttackHand && !checkSkillFoot)
+        if (!sitdown && !defense && Input.GetKeyDown(KeyCode.O) && !luot && grounded && !checkAttackFoot && !checkAttackHand && !checkSkillFoot && Mana > 5)
         {
             luot = true;
+            Mana = Mana - 5;
             attackdelay = 0.4f;
         }
         if (luot)
@@ -146,7 +149,7 @@ public class Player2 : MonoBehaviour
                     Physics2D.IgnoreCollision(col2, a.GetComponent<Collider2D>(),true);
                     r2.AddForce((Vector2.right) * (-500f)); }
                 Physics2D.IgnoreLayerCollision(8, 9);
-            }
+                }
                 else
                 {
                     luot = false;
@@ -170,6 +173,28 @@ public class Player2 : MonoBehaviour
             }
             //HoiMana();
         }
+
+        if (Input.GetKeyDown(KeyCode.U) && !luot && grounded && !checkAttackFoot && !checkAttackHand && !checkSkillFoot && Mana > 20)
+        {
+            Mana -= 20;
+            gameObject.GetComponent<Animator>().Play("NV2SkillTay");
+            GameObject Chem = (GameObject)Instantiate(ChemSkill);
+            ChemGio.checkPlayer1 = true;
+            if (transform.localScale.x < 0)
+            {
+                ChemGio.checkPhai = true;
+                Chem.transform.position = new Vector3(transform.position.x + 2f, transform.position.y + 1.5f, -1);
+            }
+            if (transform.localScale.x > 0)
+            {
+                ChemGio.checkPhai = false;
+                Chem.transform.position = new Vector3(transform.position.x - 2f, transform.position.y + 1.5f, -1);
+                Vector3 Scale;
+                Scale = Chem.transform.localScale;
+                Scale.x *= -1;
+                Chem.transform.localScale = Scale;
+            }
+        }
     }
 
     void Flip()
@@ -189,7 +214,10 @@ public class Player2 : MonoBehaviour
             Health -= 1;
         }
         else
-        Health -= dmg;
+        {
+            Health -= dmg;
+            gameObject.GetComponent<Animator>().Play("NV2BiDanh");
+        }
         Transform bar = HealthBarP1.transform.Find("Bar");
         float c = (float)Health / (float)100;
         if (c > 0)
@@ -205,17 +233,14 @@ public class Player2 : MonoBehaviour
             Health -= 5;
         }
         else
-            Health -= dmg;
+        { Health -= dmg;
+            gameObject.GetComponent<Animator>().Play("NV2BiDanh");
+        }
         Transform bar = HealthBarP1.transform.Find("Bar");
         float c = (float)Health / (float)100;
         if (c > 0)
             bar.localScale = new Vector3(c, 1f);
         else bar.localScale = new Vector3(0, 1f);
     }
-
-    //IEnumerator HoiMana()
-    //{
-    //    yield return new WaitForSeconds(1f);
-    //    Mana = Mana + 2;
-    //}
+    
 }

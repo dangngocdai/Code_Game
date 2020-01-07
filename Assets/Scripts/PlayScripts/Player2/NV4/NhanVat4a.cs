@@ -22,10 +22,10 @@ public class NhanVat4a : MonoBehaviour
         r2 = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
         col2 = gameObject.GetComponent<BoxCollider2D>();
-        //if (PlayerPrefs.GetInt(selectedCharaterPlayer1) == 2)
-        //{
-        //    gameObject.GetComponent<SpriteRenderer>().material.color = new Color(255, 148, 148);
-        //}
+        if (PlayerPrefs.GetInt(selectedCharaterPlayer1) == 4)
+        {
+            gameObject.GetComponent<SpriteRenderer>().material.color = new Color(255, 148, 148);
+        }
         Mana = 100;
         Health = 100;
     }
