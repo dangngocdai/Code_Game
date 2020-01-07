@@ -78,7 +78,7 @@ public class Player3 : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.T))
         {
-            smile = true;
+            gameObject.GetComponent<Animator>().Play("NV3Cuoi");
             ////yield return new WaitForSeconds(timedelay);
             //smile = false;
 

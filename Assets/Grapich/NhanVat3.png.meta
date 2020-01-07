@@ -21,7 +21,7 @@ TextureImporter:
     21300032: NhanVat3_16
     21300034: NhanVat3_17
     21300036: NhanVat3_18
-    21300038: NhanVat3_19
+    21300038: NhanVat3_21
     21300040: NhanVat3_20
     21300042: NhanVat3_21
     21300044: NhanVat3_22
@@ -36,6 +36,7 @@ TextureImporter:
     21300062: NhanVat3_31
     21300064: NhanVat3_32
     21300066: NhanVat3_33
+    21300068: NhanVat3_19
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -509,61 +510,21 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NhanVat3_19
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 238
-        width: 62
-        height: 87
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51588039d1ae28c4b8d0041a6e7967f2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: NhanVat3_20
       rect:
         serializedVersion: 2
-        x: 80
+        x: 79
         y: 238
-        width: 50
-        height: 97
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 54
+        height: 98
+      alignment: 9
+      pivot: {x: 0.61894506, y: 0.4558968}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: ed2cfed5d51217843bfec07cc79215a2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NhanVat3_21
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 238
-        width: 54
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ef159a7ba519b441a65c854669f3561
       vertices: []
       indices: 
       edges: []
@@ -596,8 +557,8 @@ TextureImporter:
         y: 238
         width: 121
         height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5000005, y: 0.80060035}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -804,6 +765,46 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ddc7c128122aeec449fb06d0249e74b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat3_19
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 238
+        width: 65
+        height: 88
+      alignment: 9
+      pivot: {x: 0.70422053, y: 0.5168169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f00d18a44e328419498321b0d322db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NhanVat3_21
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 238
+        width: 56
+        height: 97
+      alignment: 9
+      pivot: {x: 0.7396058, y: 0.47442815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111542c9593826445aefcc93f26b46ac
       vertices: []
       indices: 
       edges: []
