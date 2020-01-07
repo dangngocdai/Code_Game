@@ -94,7 +94,7 @@ public class TestFollowCam : MonoBehaviour
 
     float GetGreatestDistance()
     {
-        var bounds = new Bounds(targets[0].position, Vector3.zero);
+        var bounds = new Bounds(GetTargets(), Vector3.zero);
         for (int i = 0; i < targets.Count; i++)
         {
             if (targets[i] != null)
@@ -113,16 +113,28 @@ public class TestFollowCam : MonoBehaviour
     {
         if(targets.Count == 1)
         {
-            return targets[0].position;
+            return GetTargets();
         }
 
-        var bounds = new Bounds(targets[0].position, Vector3.zero);
+        var bounds = new Bounds(GetTargets(), Vector3.zero);
         for(int i = 0; i< targets.Count; i++)
         {
-            Debug.Log(targets[i]);
             if(targets[i] != null)
             bounds.Encapsulate(targets[i].position);
         }
         return bounds.center;
+    }
+
+    Vector3 GetTargets()
+    {
+        if (targets[0])
+            return targets[0].position;
+        if (targets[1])
+            return targets[1].position;
+        if (targets[2])
+            return targets[2].position;
+        if (targets[3])
+            return targets[3].position;
+        return targets[4].position;
     }
 }
