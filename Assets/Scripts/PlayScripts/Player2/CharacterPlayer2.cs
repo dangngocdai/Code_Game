@@ -6,7 +6,7 @@ public class CharacterPlayer2 : MonoBehaviour
 {
     public GameObject NhanVat2;
     public GameObject NhanVat3;
-    //public GameObject NhanVat4;
+    public GameObject NhanVat4;
     //public GameObject NhanVat5;
 
     private SpriteRenderer NhanVat2Render, NhanVat3Render, NhanVat4Render, NhanVat5Render;
@@ -64,15 +64,15 @@ public class CharacterPlayer2 : MonoBehaviour
         switch (getCharacter)
         {
             case 2:
-                //Destroy(NhanVat2);
+                Destroy(NhanVat2);
                 Destroy(NhanVat3);
-                //Destroy(NhanVat4);
+                Destroy(NhanVat4);
                 //Destroy(NhanVat5);
                 break;
             case 3:
                 Destroy(NhanVat2);
-                //Destroy(NhanVat3);
-                //Destroy(NhanVat4);
+                Destroy(NhanVat3);
+                Destroy(NhanVat4);
                 //Destroy(NhanVat5);
                 break;
             case 4:
